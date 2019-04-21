@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
+import React from "react";
+import Routes from "../routes";
 
-class App extends Component {
-    render () {
-        return (
+const App = () => (
         <div>
-            <h1>Welcome to SendIT</h1>
+            <Routes />
         </div>
-        );
-    }
-}
+);
 
 export default App;
