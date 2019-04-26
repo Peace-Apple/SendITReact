@@ -2,7 +2,7 @@ import React from "react";
 
 const Login = () => (
   <div>
-    <h3>Sign In</h3>
+    <h3>Sign In.</h3>
     <form>
       <input type="text" placeholder="Enter Email" name="email" />
       <br />
