@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user signup view should render without crashing 1`] = `
+SignupView {
+  "context": Object {},
+  "handleConfirmPasswordChange": [Function],
+  "handleEmailChange": [Function],
+  "handlePasswordChange": [Function],
+  "handlePhoneChange": [Function],
+  "handleSubmit": [Function],
+  "handleUsernameChange": [Function],
+  "props": Object {},
+  "refs": Object {},
+  "state": Object {
+    "confirmPassword": "",
+    "email": "",
+    "errors": Object {},
+    "password": "",
+    "phone_number": "",
+    "user_name": "",
+  },
+  "updater": Updater {
+    "_callbacks": Array [],
+    "_renderer": ReactShallowRenderer {
+      "_context": Object {},
+      "_didScheduleRenderPhaseUpdate": false,
+      "_dispatcher": Object {
+        "readContext": [Function],
+        "useCallback": [Function],
+        "useContext": [Function],
+        "useDebugValue": [Function],
+        "useEffect": [Function],
+        "useImperativeHandle": [Function],
+        "useLayoutEffect": [Function],
+        "useMemo": [Function],
+        "useReducer": [Function],
+        "useRef": [Function],
+        "useState": [Function],
+      },
+      "_element": <SignupView />,
+      "_firstWorkInProgressHook": null,
+      "_forcedUpdate": false,
+      "_instance": [Circular],
+      "_isReRender": false,
+      "_newState": null,
+      "_numberOfReRenders": 0,
+      "_renderPhaseUpdates": null,
+      "_rendered": <div>
+        <SignupForm
+          errors={Object {}}
+          handleConfirmPasswordChange={[Function]}
+          handleEmailChange={[Function]}
+          handlePasswordChange={[Function]}
+          handlePhoneChange={[Function]}
+          handleUsernameChange={[Function]}
+          onSubmit={[Function]}
+        />
+      </div>,
+      "_rendering": false,
+      "_updater": [Circular],
+      "_workInProgressHook": null,
+    },
+  },
+}
+`;
