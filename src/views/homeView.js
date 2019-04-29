@@ -1,9 +1,9 @@
 import React from "react";
-import Home from "../components/auth/home/homeComponent";
+import Header from "../components/header";
 
 const HomeView = () => (
   <div>
-    <Home />
+    <Header />
   </div>
 );
 

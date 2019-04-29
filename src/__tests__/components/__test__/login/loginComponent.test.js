@@ -1,8 +1,8 @@
 import React from "react";
 import { shallow } from "enzyme";
-import App from "../App";
+import Login from "../../../../components/auth/login/loginComponent";
 
 it("renders without crashing", () => {
-  const wrapper = shallow(<App />);
+  const wrapper = shallow(<Login />);
   expect(wrapper).toMatchSnapshot();
 });
