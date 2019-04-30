@@ -3,13 +3,17 @@ import { BrowserRouter, Route } from "react-router-dom";
 import HomeView from "../views/homeView";
 import LoginView from "../views/loginView";
 import SignupView from "../views/signupView";
+import ParcelView from "../views/createParcelView";
+import Logout from "../views/logoutView";
 
 const Routes = () => (
   <div>
     <BrowserRouter>
-      <Route exact path="/" component={HomeView} />
-      <Route path="/signup" component={SignupView} />
-      <Route path="/login" component={LoginView} />
+      <Route path="/" exact component={HomeView} />
+      <Route path="/signup" exact component={SignupView} />
+      <Route path="/login" exact component={LoginView} />
+      <Route path="/order" exact component={ParcelView} />
+      <Route path="/logout" exact component={Logout} />
     </BrowserRouter>
   </div>
 );

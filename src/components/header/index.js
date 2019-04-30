@@ -2,16 +2,32 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 
 class Header extends Component{
-    render(){
+    state = {
+        hidden: false,
+    }
 
+    componentWillMount() {
+        if (!localStorage.getItem("accessToken")) {
+          this.setState({ hidden: true });
+        }
+      }
+
+    render(){
         return(
             <b><header>
                     <h2>SEND-IT</h2>
                 <div>
                     <ul>
-                    <li><Link to="/signup">Register</Link></li>
-                    <li><Link to="/login">Login</Link></li>
-                </ul>
+                    
+                    <li>{this.state.hidden && (
+                    <Link to="/signup">Register</Link>)}</li>
+                    <li>{this.state.hidden && (
+                    <Link to="/login">Login</Link>)}</li>
+                    <li>{!this.state.hidden && (
+                    <Link to="/order">Send A Parcel</Link>)}</li>
+                    <li>{!this.state.hidden && (
+                    <Link to="/logout">Logout</Link>)}</li>
+                    </ul>
                 </div>
                 </header></b>
         );

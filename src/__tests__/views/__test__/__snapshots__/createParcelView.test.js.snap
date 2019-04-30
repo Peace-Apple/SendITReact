@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`user login view should render without crashing 1`] = `
-LoginView {
+exports[`create parcel view should render without crashing 1`] = `
+ParcelView {
   "context": Object {},
   "handleSubmit": [Function],
   "onChange": [Function],
   "props": Object {},
   "refs": Object {},
   "state": Object {
+    "destination": "",
     "errors": Object {},
-    "password": "",
-    "user_name": "",
+    "pickup_location": "",
+    "receivers_name": "",
+    "weight": "",
   },
   "updater": Updater {
     "_callbacks": Array [],
@@ -30,7 +32,7 @@ LoginView {
         "useRef": [Function],
         "useState": [Function],
       },
-      "_element": <LoginView />,
+      "_element": <ParcelView />,
       "_firstWorkInProgressHook": null,
       "_forcedUpdate": false,
       "_instance": [Circular],
@@ -39,7 +41,8 @@ LoginView {
       "_numberOfReRenders": 0,
       "_renderPhaseUpdates": null,
       "_rendered": <div>
-        <LoginForm
+        <Header />
+        <ParcelForm
           onChange={[Function]}
           onSubmit={[Function]}
         />

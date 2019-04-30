@@ -1,0 +1,87 @@
+/* Styling the view orders page */
+.order-content{
+    background-color: white;
+	border: 1px solid silver;
+	padding: 15px;
+    margin-bottom: 15px;
+    width: 500px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+.order-content tr td{
+	padding: 10px;
+}
+#parcels{
+    background-color: white;
+	border: 1px solid silver;
+	padding: 15px;
+    margin-bottom: 30px;
+    width: 1000%;
+    height: 70px;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+#parcels td{
+	padding: 5px;
+}
+#parcels_head{
+    background-color: white;
+	border: 1px solid silver;
+	padding: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 30px;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+.links label a{
+    color: maroon;
+    text-decoration: none;
+    font-weight: bold;
+}
+.links label:hover a{
+    color: black;
+}
+.links label button{
+    color: white;
+    text-decoration: none;
+}
+div.user_profile div{
+    float: right;
+    margin-right: 815px;
+}
+div.user_profile img{
+    height: 100px;
+    width: 100px;
+}
+@media (min-width: 760px) and (max-width: 1024px){
+	
+}
+
+@media screen and (max-width: 760px){
+    .order-content{
+        margin-left: 0px;
+        width: 130px;
+        margin-bottom: 10px;
+        padding: 13px;
+        font-size: 14px;
+    }
+    .img-detail img{
+        display: none;
+    }
+    .detail-content{
+        width: 295px;
+        height: 400px;
+        padding: 15px;
+    }
+    .detail{
+        padding: 2px;
+    }
+    .detail tr td{
+        padding-left: 0px;
+    
+    }
+}

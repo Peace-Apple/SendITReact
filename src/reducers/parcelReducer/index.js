@@ -1,22 +1,21 @@
-import { REGISTER_SUCCESS, REGISTER_FAIL } from '../../actions/types';
+import { CREATE_PARCEL_SUCCESS, CREATE_PARCEL_FAIL } from '../../actions/types';
 
 const initialState = {
   isSuccessful: false,
   errors: {},
 };
-
-const signupReducer = (state = initialState, action) => {
+const parcelReducer = (state = initialState, action) => {
   switch (action.type) {
-    case REGISTER_SUCCESS:
+    case CREATE_PARCEL_SUCCESS:
       return {
         ...state,
-        message: action.payload.message,
-        status: action.payload.status,
         isSuccessful: true,
+        message: action.payload.message,
+        data: action.payload.data,
         errors: {},
       };
 
-    case REGISTER_FAIL:
+    case CREATE_PARCEL_FAIL:
       return {
         ...state,
         isSuccessful: false,
@@ -28,4 +27,4 @@ const signupReducer = (state = initialState, action) => {
   }
 };
 
-export default signupReducer;
+export default parcelReducer;

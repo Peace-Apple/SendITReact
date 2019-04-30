@@ -1,16 +1,16 @@
-import { REGISTER_SUCCESS, REGISTER_FAIL } from '../../actions/types';
-import signupReducer from '../../reducers/signupReducer';
+import { CREATE_PARCEL_SUCCESS, CREATE_PARCEL_FAIL } from '../../actions/types';
+import parcelReducer from '../../reducers/parcelReducer';
 
-describe('signup reducer', () => {
+describe('parcel reducer', () => {
   it('should return the initial state', () => {
-    const initialState = signupReducer(undefined, {});
+    const initialState = parcelReducer(undefined, {});
     expect(initialState).toEqual({
       isSuccessful: false,
       errors: {},
     });
   });
 
-  it('should handle successful user registration', () => {
+  it('should handle successful parcel order creation', () => {
     const initialState = {
       isSuccessful: false,
     };
@@ -19,22 +19,24 @@ describe('signup reducer', () => {
       ...initialState,
       isSuccessful: true,
       message: 'message',
+      data: true,
       errors: {},
     };
 
     const action = {
-      type: REGISTER_SUCCESS,
+      type: CREATE_PARCEL_SUCCESS,
       payload: {
         message: 'message',
+        data: true,
         errors: {},
       },
     };
 
-    const newState = signupReducer(initialState, action);
+    const newState = parcelReducer(initialState, action);
     expect(newState).toEqual(expected);
   });
 
-  it('should handle unsuccessful user registration', () => {
+  it('should handle unsuccessful successful parcel order creation', () => {
     const initialState = {
       isSuccessful: false,
     };
@@ -46,11 +48,11 @@ describe('signup reducer', () => {
     };
 
     const action = {
-      type: REGISTER_FAIL,
+      type: CREATE_PARCEL_FAIL,
       payload: { error_message: 'error message' },
     };
 
-    const newState = signupReducer(initialState, action);
+    const newState = parcelReducer(initialState, action);
     expect(newState).toEqual(expected);
   });
 });
