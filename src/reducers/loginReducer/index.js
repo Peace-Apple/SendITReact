@@ -1,22 +1,24 @@
-import { REGISTER_SUCCESS, REGISTER_FAIL } from '../../actions/types';
+import { LOGIN_SUCCESS, LOGIN_FAIL } from '../../actions/types';
 
 const initialState = {
   isSuccessful: false,
+  access_token: '',
   errors: {},
 };
-
-const signupReducer = (state = initialState, action) => {
+const loginReducer = (state = initialState, action) => {
   switch (action.type) {
-    case REGISTER_SUCCESS:
+    case LOGIN_SUCCESS:
       return {
         ...state,
+        access_token: action.payload.access_token,
+        logged_in_as: action.payload.logged_in_as,
         message: action.payload.message,
         status: action.payload.status,
         isSuccessful: true,
         errors: {},
       };
 
-    case REGISTER_FAIL:
+    case LOGIN_FAIL:
       return {
         ...state,
         isSuccessful: false,
@@ -28,4 +30,4 @@ const signupReducer = (state = initialState, action) => {
   }
 };
 
-export default signupReducer;
+export default loginReducer;
