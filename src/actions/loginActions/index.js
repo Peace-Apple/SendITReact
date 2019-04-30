@@ -12,6 +12,8 @@ const loginAction = loginData => dispatch => fetch('https://apple-sendit.herokua
 })
   .then(res => res.json())
   .then((data) => {
+    const token = data.access_token;
+    localStorage.setItem('accessToken', token);
     if (data.error_message) {
       dispatch({
         type: LOGIN_FAIL,

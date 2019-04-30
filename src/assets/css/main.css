@@ -1,11 +1,9 @@
 /*styling my login and signup pages*/
 body{
 	display: flex;
-    flex-direction: column;
-}
-body.cover-image{
+	flex-direction: column;
 	background-image: url(../images/im.jpg);
-	background-size: 100%;
+	background-size: cover;
 }
 .cred{
 	color:black;
@@ -124,7 +122,7 @@ header ul li.active a{
 }
 /*styling the body*/
 .main-image{
-	background-image: url("../images/blank2.jpg");
+	background-image: url("../images/im.jpg");
 	background-size: cover;
 	
 }
@@ -162,7 +160,7 @@ div.main-content p button a{
 	div.login-main.signup{
 		margin: 20px auto;
 	}
-	body.cover-image{
+	body{
 		background-repeat: no-repeat;
 		background-size: 100% 100vh;
 	}

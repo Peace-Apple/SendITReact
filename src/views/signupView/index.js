@@ -30,6 +30,12 @@ export class SignupView extends Component {
             pauseOnHover: true,
             });
         } else {
+          toast.success("Your account has been created successfully, please log in", {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 3000,
+            hideProgressBar: false,
+            pauseOnHover: true,
+            });
           this.props.history.push("/login");
         }
         
