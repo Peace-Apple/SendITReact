@@ -55,7 +55,7 @@ describe("user login view", () => {
         expect(instance.state.user_name).toEqual("Apple");
       });
 
-      it("should call history.push to redirect to order page", () => {
+      it("should call history.push to redirect to parcels page", () => {
         const props = {
             loginAction: jest.fn(),
             isSuccessful: false,

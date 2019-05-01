@@ -25,7 +25,6 @@ const SignupForm = props => (
                 <button id="signup-button" type="submit">Signup</button>
                 <p className="down">
                         <a className="lft" href="/login">Have an account?</a>
-                        <a className="rgt" href="/reset_password">Forgot password?</a>
                         </p>
                 </form>
         </div>

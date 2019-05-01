@@ -16,7 +16,6 @@ const LoginForm = props => (
     
         <p className="down">
         <a className="lft" href="/signup">Create account</a>
-        <a className="rgt" href="#">Forgot password?</a>
         </p>
         </div>
     </div>

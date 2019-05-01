@@ -153,7 +153,8 @@ export class SignupView extends Component {
 
 export const mapStateToProps = state => ({
   isSuccessful: state.signupReducer.isSuccessful,
-  errors: state.signupReducer.errors
+  errors: state.signupReducer.errors,
+  message: state.signupReducer.message,
 });
 
 export default connect(mapStateToProps, 
