@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user parcels view should render without crashing 1`] = `
+UserParcelView {
+  "componentDidMount": [Function],
+  "context": Object {},
+  "props": Object {
+    "parcels": Array [],
+  },
+  "refs": Object {},
+  "state": null,
+  "updater": Updater {
+    "_callbacks": Array [],
+    "_renderer": ReactShallowRenderer {
+      "_context": Object {},
+      "_didScheduleRenderPhaseUpdate": false,
+      "_dispatcher": Object {
+        "readContext": [Function],
+        "useCallback": [Function],
+        "useContext": [Function],
+        "useDebugValue": [Function],
+        "useEffect": [Function],
+        "useImperativeHandle": [Function],
+        "useLayoutEffect": [Function],
+        "useMemo": [Function],
+        "useReducer": [Function],
+        "useRef": [Function],
+        "useState": [Function],
+      },
+      "_element": <UserParcelView
+        parcels={Array []}
+      />,
+      "_firstWorkInProgressHook": null,
+      "_forcedUpdate": false,
+      "_instance": [Circular],
+      "_isReRender": false,
+      "_newState": null,
+      "_numberOfReRenders": 0,
+      "_renderPhaseUpdates": null,
+      "_rendered": <div>
+        <Header />
+        <div
+          className="main-content"
+        >
+          <h2>
+            Welcome to SEND-IT! We deliver as fast as you create your orders!
+          </h2>
+          <div
+            className="parcel-link"
+          >
+            <a
+              href="/order"
+            >
+              Send a Parcel
+            </a>
+          </div>
+          <div
+            className="user_profile"
+            id="my_profile"
+          >
+            <img
+              alt="text"
+              src={Object {}}
+            />
+            <div>
+              <h2 />
+              <p>
+                <b>
+                  Email:
+                </b>
+                 
+              </p>
+              <p>
+                <b>
+                  Contact:
+                </b>
+                 
+              </p>
+            </div>
+          </div>
+          <div
+            id="user_parcels"
+          >
+            <table
+              width="99%"
+            >
+              <thead>
+                <tr
+                  id="parcels_head"
+                >
+                  <th>
+                    Sender
+                  </th>
+                  <th>
+                    Receiver
+                  </th>
+                  <th>
+                    Pickup Location
+                  </th>
+                  <th>
+                    Destination
+                  </th>
+                  <th>
+                    Weight
+                  </th>
+                  <th>
+                    Order Date
+                  </th>
+                  <th>
+                    Delivery Status
+                  </th>
+                  <th>
+                    Present Location
+                  </th>
+                  <th>
+                    Edit Destination
+                  </th>
+                  <th>
+                    Cancel Delivery
+                  </th>
+                  <th>
+                    View Detail
+                  </th>
+                </tr>
+              </thead>
+              <tbody />
+            </table>
+          </div>
+        </div>
+      </div>,
+      "_rendering": false,
+      "_updater": [Circular],
+      "_workInProgressHook": null,
+    },
+  },
+}
+`;

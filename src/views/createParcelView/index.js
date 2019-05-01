@@ -23,12 +23,14 @@ export class ParcelView extends Component {
                 pauseOnHover: true,
               });
           } else if(nextProps.data === true){
+            
             toast.success("You have successfully posted a parcel delivery order", {
                 position: toast.POSITION.TOP_CENTER,
                 autoClose: 3000,
                 hideProgressBar: false,
                 pauseOnHover: true,
               });
+              this.props.history.push("/parcels");
           }
       }
 

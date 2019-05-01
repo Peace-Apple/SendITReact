@@ -24,6 +24,8 @@ class Header extends Component{
                     <li>{this.state.hidden && (
                     <Link to="/login">Login</Link>)}</li>
                     <li>{!this.state.hidden && (
+                    <Link to="/parcels">Dashboard</Link>)}</li>
+                    <li>{!this.state.hidden && (
                     <Link to="/order">Send A Parcel</Link>)}</li>
                     <li>{!this.state.hidden && (
                     <Link to="/logout">Logout</Link>)}</li>

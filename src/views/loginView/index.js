@@ -26,7 +26,7 @@ export class LoginView extends Component {
             hideProgressBar: false,
             pauseOnHover: true,
             });
-            this.props.history.push("/order");
+            this.props.history.push("/parcels");
       }
     }
 
