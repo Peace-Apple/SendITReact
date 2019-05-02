@@ -9,6 +9,9 @@ LoginView {
   "refs": Object {},
   "state": Object {
     "errors": Object {},
+    "loader": Object {
+      "loading": false,
+    },
     "password": "",
     "user_name": "",
   },
@@ -39,6 +42,9 @@ LoginView {
       "_numberOfReRenders": 0,
       "_renderPhaseUpdates": null,
       "_rendered": <div>
+        <CircularProgressLoader
+          loading={false}
+        />
         <LoginForm
           onChange={[Function]}
           onSubmit={[Function]}

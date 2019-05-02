@@ -5,15 +5,15 @@ describe('user parcels reducer', () => {
   it('should return the initial state', () => {
     const initialState = userParcelsReducer(undefined, {});
     expect(initialState).toEqual({
-        isSuccessful: false,
-        parcels: [],
+      isSuccessful: false,
+      parcels: [],
     });
   });
 
   it('should handle successful fetching of users parcels', () => {
     const initialState = {
-        isSuccessful: false,
-        parcels: [],
+      isSuccessful: false,
+      parcels: [],
     };
 
     const expected = {

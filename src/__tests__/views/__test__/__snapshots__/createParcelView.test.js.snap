@@ -10,6 +10,9 @@ ParcelView {
   "state": Object {
     "destination": "",
     "errors": Object {},
+    "loader": Object {
+      "loading": false,
+    },
     "pickup_location": "",
     "receivers_name": "",
     "weight": "",
@@ -42,6 +45,9 @@ ParcelView {
       "_renderPhaseUpdates": null,
       "_rendered": <div>
         <Header />
+        <CircularProgressLoader
+          loading={false}
+        />
         <ParcelForm
           onChange={[Function]}
           onSubmit={[Function]}

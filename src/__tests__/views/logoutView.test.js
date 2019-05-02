@@ -1,6 +1,6 @@
-import React from "react";
-import { shallow, mount } from "enzyme";
-import Logout from "../../views/logoutView";
+import React from 'react';
+import { shallow, mount } from 'enzyme';
+import Logout from '../../views/logoutView';
 
 const props = {
   history: {
@@ -8,8 +8,8 @@ const props = {
   },
 };
 
-describe("logout view", () => {
-  it("should render without crashing", () => {
+describe('logout view', () => {
+  it('should render without crashing', () => {
     const wrapper = shallow(<Logout {...props} />);
     expect(wrapper).toMatchSnapshot();
   });

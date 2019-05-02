@@ -15,6 +15,9 @@ SignupView {
     "confirmPassword": "",
     "email": "",
     "errors": Object {},
+    "loader": Object {
+      "loading": false,
+    },
     "password": "",
     "phone_number": "",
     "user_name": "",
@@ -46,6 +49,9 @@ SignupView {
       "_numberOfReRenders": 0,
       "_renderPhaseUpdates": null,
       "_rendered": <div>
+        <CircularProgressLoader
+          loading={false}
+        />
         <SignupForm
           errors={Object {}}
           handleConfirmPasswordChange={[Function]}

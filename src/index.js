@@ -1,13 +1,13 @@
 import React from 'react';
-import "react-toastify/dist/ReactToastify.css";
+import 'react-toastify/dist/ReactToastify.css';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import App from './App';
-import { Provider } from "react-redux";
-import store from "./store";
+import store from './store';
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>, 
-    document.getElementById('root') || document.createElement('div'),
-    );
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root') || document.createElement('div'),
+);

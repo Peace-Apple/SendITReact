@@ -1,11 +1,11 @@
-import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import HomeView from "../views/homeView";
-import LoginView from "../views/loginView";
-import SignupView from "../views/signupView";
-import ParcelView from "../views/createParcelView";
-import UserParcelView from "../views/userParcelView";
-import Logout from "../views/logoutView";
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import HomeView from '../views/homeView';
+import LoginView from '../views/loginView';
+import SignupView from '../views/signupView';
+import ParcelView from '../views/createParcelView';
+import UserParcelView from '../views/userParcelView';
+import Logout from '../views/logoutView';
 
 const Routes = () => (
   <div>

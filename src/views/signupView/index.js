@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import SignupForm from "../../components/auth/signupForm";
 import signupAction from "../../actions/signupActions";
 import { toast } from "react-toastify";
+import CircularProgressLoader from "../../loader/loader";
 
 export class SignupView extends Component {
     state = {
@@ -11,7 +12,10 @@ export class SignupView extends Component {
         phone_number: "",
         password: "",
         confirmPassword: "",
-        errors: {}
+        errors: {},
+        loader: {
+          loading: false,
+        },
       };
 
       componentWillReceiveProps(nextProps){
@@ -38,6 +42,7 @@ export class SignupView extends Component {
             });
           this.props.history.push("/login");
         }
+        this.setState({ loader: { loading: false } });
         
       }
 
@@ -130,11 +135,14 @@ export class SignupView extends Component {
           password: this.state.password,
         }
         this.props.signupAction(userData);
+        this.setState({ loader: { loading: true } });
       }
 
     render() {
+      const loader = this.state.loader;
       return (
         <div>
+          <CircularProgressLoader {...loader} />
           <SignupForm
             onSubmit={this.handleSubmit}
             onChange={this.onChange}

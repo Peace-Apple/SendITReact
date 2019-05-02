@@ -49,7 +49,7 @@ export class UserParcelView extends Component {
                 
                     {user_parcels.map((parcel)=> {
                        return(
-                        <tr id="parcels" key={parcel.parcel_id}>
+                        <tr id="parcels" key={parcel}>
                             <td>{parcel.delivery_status}</td>
                             <td>{parcel.receivers_name}</td>
                             <td>{parcel.pickup_location}</td>

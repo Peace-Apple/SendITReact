@@ -1,8 +1,8 @@
-import React from "react";
-import { shallow } from "enzyme";
-import Header from "../../../components/header";
+import React from 'react';
+import { shallow } from 'enzyme';
+import Header from '../../../components/header';
 
-it("renders without crashing", () => {
+it('renders without crashing', () => {
   const wrapper = shallow(<Header />);
   expect(wrapper).toMatchSnapshot();
 });

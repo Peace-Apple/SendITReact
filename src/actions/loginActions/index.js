@@ -13,15 +13,15 @@ const loginAction = loginData => dispatch => fetch('https://apple-sendit.herokua
   .then(res => res.json())
   .then((data) => {
     const token = data.access_token;
-    const user_id = data.user_id;
-    const logged_in_as = data.logged_in_as;
-    const email = data.email;
-    const contact = data.contact;
+    const { user_id } = data;
+    const { logged_in_as } = data;
+    const { email } = data;
+    const { contact } = data;
     localStorage.setItem('accessToken', token);
-    localStorage.setItem('userID',user_id);
-    localStorage.setItem('username',logged_in_as);
+    localStorage.setItem('userID', user_id);
+    localStorage.setItem('username', logged_in_as);
     localStorage.setItem('email', email);
-    localStorage.setItem('contact',contact);
+    localStorage.setItem('contact', contact);
     if (data.error_message) {
       dispatch({
         type: LOGIN_FAIL,
@@ -39,7 +39,7 @@ const loginAction = loginData => dispatch => fetch('https://apple-sendit.herokua
           message: data.message,
           status: data.status,
           contact: data.contact,
-          email: data.email
+          email: data.email,
         },
       });
     }

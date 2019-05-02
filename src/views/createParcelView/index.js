@@ -4,6 +4,7 @@ import Header from "../../components/header"
 import ParcelForm from "../../components/parcels/parcelForm";
 import parcelAction from "../../actions/parcelActions";
 import { toast } from "react-toastify";
+import CircularProgressLoader from "../../loader/loader";
 
 export class ParcelView extends Component {
     state = {
@@ -11,7 +12,10 @@ export class ParcelView extends Component {
         pickup_location: "",
         destination: "",
         weight: "",
-        errors: {}
+        errors: {},
+        loader: {
+          loading: false,
+        },
       };
 
       componentWillReceiveProps(nextProps){
@@ -22,8 +26,7 @@ export class ParcelView extends Component {
                 hideProgressBar: false,
                 pauseOnHover: true,
               });
-          } else if(nextProps.data === true){
-            
+          } else {
             toast.success("You have successfully posted a parcel delivery order", {
                 position: toast.POSITION.TOP_CENTER,
                 autoClose: 3000,
@@ -32,6 +35,7 @@ export class ParcelView extends Component {
               });
               this.props.history.push("/parcels");
           }
+          this.setState({ loader: { loading: false } });
       }
 
       onChange = (e) => {
@@ -47,12 +51,15 @@ export class ParcelView extends Component {
             weight: this.state.weight,
         }
         this.props.parcelAction(parcelData);
+        this.setState({ loader: { loading: true } });
       }
 
     render() {
+      const loader = this.state.loader;
       return (
         <div>
           <Header />
+          <CircularProgressLoader {...loader} />
           <ParcelForm
           onSubmit={this.handleSubmit}
           onChange={this.onChange}
